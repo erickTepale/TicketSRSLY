@@ -1,0 +1,40 @@
+body { 
+    height: 100vh;
+    background: url(../../../assets/images/purple-crowd.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+.bottom-borders{
+    border-bottom: 2.5px solid #ffffff;
+    margin: auto;
+    width: 80%;
+}
+input{
+    margin: auto;
+    width: 60%;
+}
+
+input::placeholder {
+    color: #ffffff;
+    text-align: center;
+}
+
+button{
+    margin: auto;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .bottom-borders{
+        width: 50%;
+    }
+
+    input{
+        width: 30%;
+    }
+
+    
+ }
