@@ -26,6 +26,11 @@ button{
     margin: auto;
 }
 
+.content{
+    opacity: .8;
+    font-weight: bolder;
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .bottom-borders{
