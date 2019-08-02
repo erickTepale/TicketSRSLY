@@ -1,9 +1,17 @@
 span{
-    background-color: black;
-    padding: 10px;
-    
+   /* background-color: ; */
+    padding: 5px;
+    margin-bottom: 1rem;
+    padding-top: 2.5px;
 }
 
-nav{
-    /* height: 10%; */
+a{
+    color: white;
 }
+
+ nav{
+    padding: 2px;
+    height: 1.8rem;
+    opacity: .9;
+    padding-bottom: 2px;
+ }

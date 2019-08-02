@@ -1,0 +1,18 @@
+
+body{
+    height: 100vh;
+    background: url(../../../assets/images/backgroundSearch1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.search{
+    margin-top: 15vh;
+    width: 40vw;
+}
+
+button{
+    width: 10em;
+}
