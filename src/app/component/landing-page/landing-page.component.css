@@ -12,15 +12,16 @@ select{
     margin:0;
 }
 
+
 #city{
     margin:0;
     padding:0;
 }
 
-.city-state{
+/* .city-state{
     margin: auto;
     width: 65%;
-}
+} */
 
 .bottom-borders{
     border-bottom: 2.5px solid #ffffff;
@@ -38,7 +39,8 @@ input::placeholder {
 }
 
 button{
-    margin: auto;
+    margin: 0;
+    width: 100%;
 }
 
 .content{
@@ -46,20 +48,25 @@ button{
     font-weight: bolder;
 }
 
-
+.form-group{
+    width: 100%;
+}
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .bottom-borders{
         width: 50%;
     }
 
-    input{
+    /* input{
         width: 30%;
-    }
+    } */
 
-    .city-state{
+    /* .city-state{
         width: 30%;
-    }
+    } */
 
+    .form-group{
+        width: 100%;
+    }
     
  }
