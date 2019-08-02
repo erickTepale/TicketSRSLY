@@ -7,6 +7,21 @@ body {
     background-size: cover;
   }
 
+select{
+    padding:0;
+    margin:0;
+}
+
+#city{
+    margin:0;
+    padding:0;
+}
+
+.city-state{
+    margin: auto;
+    width: 65%;
+}
+
 .bottom-borders{
     border-bottom: 2.5px solid #ffffff;
     margin: auto;
@@ -31,6 +46,7 @@ button{
     font-weight: bolder;
 }
 
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .bottom-borders{
@@ -38,6 +54,10 @@ button{
     }
 
     input{
+        width: 30%;
+    }
+
+    .city-state{
         width: 30%;
     }
 
