@@ -11,8 +11,8 @@ export class LocationSearchService {
 
   constructor(private http:HttpClient) { }
 
-  getLocationId():any{
-    return this.http.get(environment.songkickapi + "search/locations.json?query=cherry hill new jersey&apikey=Cls2aaXVCLCOEiU2");
+  getLocationId(city:string, state:string):any{
+    return this.http.get(environment.songkickapi + "search/locations.json?query= "+ city + " " + state + "&apikey=" + environment.apiKey);
   }
 
   

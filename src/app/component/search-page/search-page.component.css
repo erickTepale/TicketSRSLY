@@ -8,11 +8,28 @@ body{
     background-size: cover;
 }
 
-.search{
-    margin-top: 15vh;
-    width: 40vw;
+option{
+    width: 100%;
 }
 
-button{
-    width: 10em;
+.search{
+    margin-top: 15vh;
+    width: 60vw;
 }
+
+.formz{
+    align-items: stretch;
+}
+button{
+    width: 100%;
+}
+
+/* input{
+    width: 80%;
+} */
+
+select{
+    height: 100%;
+}
+
+
