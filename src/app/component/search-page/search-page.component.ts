@@ -8,11 +8,13 @@ import { connectableObservableDescriptor } from 'rxjs/internal/observable/Connec
   templateUrl: './search-page.component.html',
   styleUrls: ['./search-page.component.css']
 })
+
 export class SearchPageComponent implements OnInit {
   city:string;
   state:string;
   locationID:number;
   selectedState:string;
+  locationArr:any[];
 
 
   constructor(private locationSearch:LocationSearchService) { }
@@ -20,12 +22,28 @@ export class SearchPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  //queries locations based on city / state
   getLocationId(city:string){
-    this.locationSearch.getLocationId(city, this.selectedState).subscribe(location => {
-      this.locationID = location.resultsPage.results.location[0].metroArea.id;
-      this.city = location.resultsPage.results.location[0].city.displayName;
-      this.state = location.resultsPage.results.location[0].city.state.displayName;
+    this.locationSearch.getLocationId(city.toUpperCase(), this.selectedState).subscribe(result => {
+      this.locationArr = result.resultsPage.results.location;
+      console.log(this.locationArr);
+      this.parseData(city.toUpperCase());
     });
+  }
+
+  //gets the locationId array and parses it
+  parseData(city:string){
+    this.locationArr.forEach(location => {
+      if(location.city.displayName.toUpperCase() == city && location.city.state.displayName.toUpperCase() == this.selectedState
+        ){
+          
+          this.locationID = location.metroArea.id;
+          this.city = location.city.displayName;
+          this.state = location.city.state.displayName;
+        }
+    });
+
+    console.log(this.locationID);
   }
 
   //changes the selected value of the current select option

@@ -12,7 +12,7 @@ export class LocationSearchService {
   constructor(private http:HttpClient) { }
 
   getLocationId(city:string, state:string):any{
-    return this.http.get(environment.songkickapi + "search/locations.json?query= "+ city + " " + state + "&apikey=" + environment.apiKey);
+    return this.http.get(environment.songkickapi + "search/locations.json?query="+ city + "_" + state + "&apikey=" + environment.apiKey);
   }
 
   

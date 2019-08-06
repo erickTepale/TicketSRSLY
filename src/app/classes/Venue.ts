@@ -5,5 +5,4 @@ export class Venue{
     displayName:string;
     uri:string;
     location:Location;
-
 }
