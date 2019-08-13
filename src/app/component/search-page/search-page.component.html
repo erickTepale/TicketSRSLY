@@ -1,80 +1,93 @@
 <app-header class="app"></app-header>
 
 <body>
-    <!-- search form -->
-    <div class="container-fluid float-left search">
-        <form>
-            <div class="d-flex formz">
-                <input #city class="form-control form-control-lg" type="text" placeholder="City">
-                <div class="select-container">
-                    <select #state (change)="selectChangeHandler($event)" class="form-control from-control-lg select" id="state" name="state">
-                        <option value="">ST</option>
-                        <option value="AK">AK</option>
-                        <option value="AL">AL</option>
-                        <option value="AR">AR</option>
-                        <option value="AZ">AZ</option>
-                        <option value="CA">CA</option>
-                        <option value="CO">CO</option>
-                        <option value="CT">CT</option>
-                        <option value="DC">DC</option>
-                        <option value="DE">DE</option>
-                        <option value="FL">FL</option>
-                        <option value="GA">GA</option>
-                        <option value="HI">HI</option>
-                        <option value="IA">IA</option>
-                        <option value="ID">ID</option>
-                        <option value="IL">IL</option>
-                        <option value="IN">IN</option>
-                        <option value="KS">KS</option>
-                        <option value="KY">KY</option>
-                        <option value="LA">LA</option>
-                        <option value="MA">MA</option>
-                        <option value="MD">MD</option>
-                        <option value="ME">ME</option>
-                        <option value="MI">MI</option>
-                        <option value="MN">MN</option>
-                        <option value="MO">MO</option>
-                        <option value="MS">MS</option>
-                        <option value="MT">MT</option>
-                        <option value="NC">NC</option>
-                        <option value="ND">ND</option>
-                        <option value="NE">NE</option>
-                        <option value="NH">NH</option>
-                        <option value="NJ">NJ</option>
-                        <option value="NM">NM</option>
-                        <option value="NV">NV</option>
-                        <option value="NY">NY</option>
-                        <option value="OH">OH</option>
-                        <option value="OK">OK</option>
-                        <option value="OR">OR</option>
-                        <option value="PA">PA</option>
-                        <option value="PR">PR</option>
-                        <option value="RI">RI</option>
-                        <option value="SC">SC</option>
-                        <option value="SD">SD</option>
-                        <option value="TN">TN</option>
-                        <option value="TX">TX</option>
-                        <option value="UT">UT</option>
-                        <option value="VA">VA</option>
-                        <option value="VT">VT</option>
-                        <option value="WA">WA</option>
-                        <option value="WI">WI</option>
-                        <option value="WV">WV</option>
-                        <option value="WY">WY</option>
-                    </select>
+    <div class="main container-fluid">
+        <!-- search form -->
+        <div class="container-fluid float-left search">
+            <form>
+                <div class="d-flex formz">
+                    <input #city class="form-control form-control-lg" type="text" placeholder="City">
+                    <div class="select-container">
+                        <select #state (change)="selectChangeHandler($event)"
+                            class="form-control from-control-lg select" id="state" name="state">
+                            <option value="">ST</option>
+                            <option value="AK">AK</option>
+                            <option value="AL">AL</option>
+                            <option value="AR">AR</option>
+                            <option value="AZ">AZ</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="IA">IA</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="MA">MA</option>
+                            <option value="MD">MD</option>
+                            <option value="ME">ME</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MO">MO</option>
+                            <option value="MS">MS</option>
+                            <option value="MT">MT</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="NE">NE</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NV">NV</option>
+                            <option value="NY">NY</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="PR">PR</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VA">VA</option>
+                            <option value="VT">VT</option>
+                            <option value="WA">WA</option>
+                            <option value="WI">WI</option>
+                            <option value="WV">WV</option>
+                            <option value="WY">WY</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <button type="button" (click)="getLocationId(city.value, stateOBJ)" class="button button-lg bg-primary text-white">Search</button>
-        </form>
-    </div>
+                <button type="button" (click)="getLocationId(city.value, stateOBJ)"
+                    class="button button-lg bg-primary text-white">Search</button>
+            </form>
+        </div>
 
-    <!-- list -->
-    <div class="list">
-        <ul>
-            <li  *ngFor="let show of shows" class="li"></li>
-        </ul>
+        <!-- list -->
+        <div class="container list float-left">
+            <ul>
+                <div *ngFor="let event of events" class="li">
+                    <div class="card border border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">{{event.performance[0].displayName}}</h5>
+                            <h6 *ngIf="event.performance[0].displayName" class="card-subtitle">{{event.performance[0].displayName}}</h6> <!-- NEED JUST VENUE -->
+                            <p *ngIf="event.startTime.date" class="card-text">{{event.startTime.date}}</p>
+                            <p *ngIf="event.startTime.time" class="card-text">{{event.startTime.time}}</p>
+                            <p *ngIf="event.type" class="card-text">{{event.type}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
     </div>
-
 </body>
 
 <app-footer></app-footer>

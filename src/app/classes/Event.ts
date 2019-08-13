@@ -6,17 +6,24 @@ export class Event {
     type:string;
     uri:string;
     startTime:Start;
-    performance:Performance;
-    artist:Artist;
+    performance:Performance[];
+
+    constructor(){}
 }
 
-class Start{
+export class Start{
     date:string;
     time:string;
+    constructor(){}
 }
 
-class Performance{
+export class Performance{
     id:number;
     displayName: string;
-
+    artist:Artist;
+    constructor(id:number, displayName:string, artist:Artist){
+        this.id=id;
+        this.displayName = displayName;
+        this.artist = artist;
+    }
 }

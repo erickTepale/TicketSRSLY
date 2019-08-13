@@ -2,10 +2,12 @@
 body{
     height: 100vh;
     background: url(../../../assets/images/backgroundSearch1.jpg) no-repeat center center fixed;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: scroll;
 }
 
 option{
@@ -27,6 +29,28 @@ button{
 /* input{
     width: 80%;
 } */
+
+ul{
+    padding:0;
+    width: 60vw;
+    margin-top: 10px;
+    margin-bottom: 5em;
+    
+}
+
+div.li{
+    width: 60vw;
+    margin-left: 0;
+}
+
+.card-body{
+    padding: 0;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
 
 select{
     height: 100%;

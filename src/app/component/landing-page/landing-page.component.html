@@ -1,14 +1,22 @@
-<body>
-    <div class="jumbotron bg-transparent jt">
+<div class="body">
+    <!-- <div class="jumbotron bg-transparent jt">
         <h1 class="text-center font-weight-bold bottom-borders text-white ">TicketSRSLY</h1>
-    </div>
+    </div> -->
+    <header class="container-fluid bg-primary d-flex justify-content-between">
+        <h1 class="text-center font-weight-bold text-white ">TicketSRSLY</h1>
+        <span class="">
+            <button type="button" class="bg-secondary text-white">Sign In</button>
+            <button type="button" class="bg-secondary text-white">Register</button>
+        </span>
+    </header>
 
     <div class="content">
         <form>
             <div class="text-center">
                 <div class="text-center d-flex city-state justify-content-center">
-                    <input #city type="text" class="text-center form-control form-group bg-info text-white" id="city" placeholder="City">
-                    <select class="form-group" id="state" name="state">
+                    <input #city type="text" class="text-center form-control form-group bg-info text-white" id="city"
+                        placeholder="City">
+                    <select #state class="form-group" id="state" name="state">
                         <option value="">N/A</option>
                         <option value="AK">Alaska</option>
                         <option value="AL">Alabama</option>
@@ -64,14 +72,14 @@
                         <option value="WY">Wyoming</option>
                     </select>
                 </div>
-                <input type="button" class="text-center btn btn-info text-center" value="Search" />
+                <input type="button" (click)="search(city.value, stateOBJ)" class="text-center btn btn-info text-center" value="Search" />
 
             </div>
         </form>
     </div>
 
     <app-footer></app-footer>
-</body>
+</div>
 
 <!-- image credit for stage-light Photo by Yvette de Wit on Unsplash -->
 <!-- image credit for blue-dj Photo by Banter Snaps on Unsplash -->

@@ -1,4 +1,4 @@
-body { 
+.body { 
     height: 100vh;
     background: url(../../../assets/images/purple-crowd.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
