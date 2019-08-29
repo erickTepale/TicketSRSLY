@@ -1,0 +1,14 @@
+<div id="SigninModal" class="modal" *ngIf="showSignInModal">
+        <div class="modal-content pop">
+                <button class="btn btn-outline-danger my-2 my-sm-0 float-right exit" id="exitLoginBtn" type="submit" (click)=changeDisplay()
+                (keydown.esc)=changeDisplay()>X</button>
+            <h2 class="text-center">Add Users</h2>
+            
+            <ul *ngIf="listUsers" class="list-group text-center">
+                <li *ngFor="let currentUser of listUsers" (click)="listuserClick(currentUser)"
+                    class="list-group-item bg-primary">
+                    <span class="badge">#{{currentUser.username}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
