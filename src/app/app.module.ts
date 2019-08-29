@@ -8,6 +8,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { SearchPageComponent } from './component/search-page/search-page.component';
 import { HeaderComponent } from './component/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignInModelComponent } from './component/sign-in-model/sign-in-model.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     LandingPageComponent,
     FooterComponent,
     SearchPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignInModelComponent
   ],
   imports: [
     BrowserModule,
